@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block functions %}
+    function amogus(){
+        if(document.getElementById("amogusParagraph").innerHTML == "I love memes (who doesn't) and form part of my personality (thing I'm not proud of), or if you ever speak with me in a casual way be prepared since I'll be incorporating memes in the conversation regularly and out of context."){
+            document.getElementById("amogusParagraph").innerHTML = "I love &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp a&nbsp&nbsp &nbsp&nbsp&nbspm &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbspo&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbspg &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbspu&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp s&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+        }
+        else{
+            document.getElementById("amogusParagraph").innerHTML = "I love memes (who doesn't) and form part of my personality (thing I'm not proud of), or if you ever speak with me in a casual way be prepared since I'll be incorporating memes in the conversation regularly and out of context.";
+        }
+        return;
+    }
+{% endblock functions %}
+
+{% block content %}
+    <div id="PageTitle"><h1>Who am I?</h1></div>
+    <div id="PageContent">
+        <p>My name is Kevin Montoya, I'm a 21 yo mexican mechatronical engineer and a technology enthuasiastic. Proof of that is this website I created almost from scratch (I copied the structure from the official <a href="https://docs.oracle.com/javase/tutorial/java/concepts/index.html" target="_blank" rel="noopener">java learning site</a> and some pens from <a href="https://codepen.io"target="_blank" rel="noopener">codeopen.io</a> which I credited on <a href="projects/this-website">this website</a> entry haha),
+        my knowledge covers several fields of engineering going from the roughest like mechanics or hidraulics to the techiest like cybesecurity or networking. I also like philosophy, physics, politics, economics and biology.
+        </p>
+        <h2>Why did I create a website?</h2>
+        <p>Well, why not? The main reason behind this is to have a place where I could add all my engineering knowledge and experience (since it wouldn't fit in a two pages curriculum) and share the stuff I'm learning 
+        (also, this is a way to have my learning documented so if I'm unable to remember a specific detail, I can look it up on this website).</p>
+        <h2>More about me</h2>
+        <p>I was born on Mexico and, therefore, spanish is my mother language. I have always had close contact with english speakers so naturally I'd learn it. I also have decent knowledge in portuguese 
+        (which, to be honest, is pretty much the same as spanish) and looking forward to learn russian and maybe (just maybe) chinese.</p>
+        <p id="amogusParagraph">I love memes (who doesn't) and form part of my personality (thing I'm not proud of), or if you ever speak with me in a casual way be prepared since I'll be incorporating memes in the conversation regularly and out of context.</p>
+        <!--<p id="amogusParagraph2">I&nbsplove&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspa&nbsp&nbsp&nbsp&nbsp&nbsp&nbspm&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspo&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspg&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspu&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsps
+            </p>-<button href="javascripr:amogus()" id="amogusButton"></button>-->
+        <center><a href="javascript:amogus()"><button class="custom-btn btn-1" ><span>this is kinda sus</span></button></a></center>
+        <p>I'm a person that is always looking to gain knowledge, cause I believe the moment you stop learning is the moment you start dying. I consider that knowledge should be obtained for the
+        mere purpose of freeing oneself, since it gives you a diferent insight and makes you realize that you are the universe experiencing itself through an incredibly complex body that took
+        millions of years to evolve. I also have several goals, but might not be posting them here hehe.</p>
+        <p>Finally, here is an image that graphically represents how I feel when I'm depressed:</p>
+        <center><img src="{{url_for('static',filename='images/SuperYoAmiga.jpeg')}}"  height="200" ></center>
+        <p>And this how I felt when building this website:</p>
+        <center><img src="{{url_for('static',filename='images/Saiberpank.jpeg')}}"  height="150" ></center>
+    </div>
+    </div>
+{% endblock content %}
+

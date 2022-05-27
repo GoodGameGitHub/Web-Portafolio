@@ -1,0 +1,164 @@
+{% extends "./layout.html" %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='progressBar.css')}}">
+{% endblock stylesheets %}
+
+
+{% block loadFunction %}
+
+    document.getElementById("FluidArrowContent").style.visibility = "hidden";
+    document.getElementById("FluidArrowContent").className = "botomContentHidden";
+    document.getElementById("MatlabArrowContent").style.visibility = "hidden";
+    document.getElementById("MatlabArrowContent").className = "botomContentHidden";
+    document.getElementById("LabVIEWArrowContent").style.visibility = "hidden";
+    document.getElementById("LabVIEWArrowContent").className = "botomContentHidden";
+{% endblock loadFunction%}
+
+
+{% block functions %}
+    function showDesc(id){
+        if(document.getElementById(id).innerHTML == "►"){
+            document.getElementById(id).innerHTML = "&#9660;";
+            document.getElementById(id+"Content").style.visibility = "visible";
+            document.getElementById(id+"Content").className = "botomContentShown";
+        }
+        else if(document.getElementById(id).innerHTML == "▼"){
+            document.getElementById(id).innerHTML = "&#9658;";
+            document.getElementById(id+"Content").style.visibility = "hidden";
+            document.getElementById(id+"Content").className = "botomContentHidden";
+        }
+        return;
+    }
+
+    
+{% endblock functions %}
+
+
+
+{% block content %}
+    <h2>Mechatronics paradigms & knowledge</h2>
+    <div>
+        <div style="width:100%">
+            <div style="width: 33%;float:left">
+                &#8226;Robotics (manipulators and cnc machines)
+            </div>
+            <div style="width: 33%;float:left">
+                &#8226;Classic and modern control
+            </div>
+            <div style="width: 33%;float:left">
+                &#8226;Graphic/Physical UI
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width: 33%;float:left">
+                &#8226;PLC
+            </div>
+            <div style="width: 33%;float:left">
+                &#8226;Automation
+            </div>
+        </div>
+    </div>
+    <p>
+        <br><br><br><br>
+    </p>
+    <h2>Software & programming languages</h2>
+    <div class="halfContentHalfBar">
+        <div class="halfContent">
+            <div class="verticalCenter"></div>
+        </div>
+        <div class="halfBar">
+            <div class="verticalCenter">
+            <ul>
+                <li>Beginner</li>
+                <li>Intermediate</li>
+                <li>Advanced</li>
+                <li>Professional</li>
+                <li>Expert</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="MatlabArrow" href="javascript:showDesc('MatlabArrow');" >&#9658;</a> Matlab
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="MatlabArrowContent" class="bottomContentHidden">
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Simulink<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;3DOF SCARA simulation (scholar)<br>
+            &#8226;System and 3D modelling of mobile with differential traction robot (scholar)<br>
+            &#8226;Transformer efficiency calculator (scholar)
+        </p>
+        <br>
+    </div>
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="LabVIEWArrow" href="javascript:showDesc('LabVIEWArrow');" >&#9658;</a> LabVIEW
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="reachedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="FluidArrow" href="javascript:showDesc('FluidArrow');" >&#9658;</a> FluidSim
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="FluidArrowContent" class="bottomContentHidden">
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Hidraulic/Pneumatic<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;PLC Sequential process simulation (scholar)<br>
+        </p>
+        <br>
+    </div>
+    <p>
+        <br>
+    </p>
+    <h2>Professional Experience</h2>
+    <p class="tightParagraph">
+        No professional experience yet :(
+    </p>
+
+    
+{% endblock content %}

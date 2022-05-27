@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='commentfulPage.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="DateTitle">
+        <div id="PageTitle" style="float:left"><h1>This website</h1></div>
+        <div style="float:right"><h2>May 5th 2022</h2></div>
+    </div>
+    <div id="PageContent">
+        <p>
+            Creating this website was my very first challenging project, mainly due to the fact that I barely had experience
+            with web programming. Some web programming concepts were learnt over the run, and defenitely the hardest one 
+            to learn was how to center a div /s.
+            It took me around 40 days to build this website from scratch and around 50 raw hours, but definetely was worth
+            the time.
+        </p>
+        <h2>This server's frontend</h2>
+        <p>
+            The design of this website was inspired by a mix of a futuristic, hacking and cyberpunk aesthetics 
+            (I think is obviously noticeable haha). Took some inspiration from the show Mr. Robot and the videogame
+            CyberPunk 2077. <br>
+            As I mentioned on the <a href="/aboutMe">About Me</a> page, I based the website structure on the official java
+            learning site one and modified some pens from codepen.io. The pens in question and the modifications are:
+        </p>
+        <!--
+            <a href="https://codepen.io/nickpettit/pen/nOOdme"target="_blank" rel="noopener">
+                <div class="imageWithContent">
+                    <div class="imageContainer">
+                        <img src="{{url_for('static',filename='images/projects/this-website/levels.png')}}"/>
+                    </div>
+                    <div class="imageContent">
+                        asdadasdasdad
+                    </div>
+                </div>
+            </a>
+        </div>
+        --> 
+        
+        <div class="hoverImageContainer">
+            <a href="https://codepen.io/Thibka/pen/BRzgOM" target="_blank" rel="noopener">
+                <div class="hoverImage">
+                    <img src="{{url_for('static',filename='images/projects/this-website/cyberCity.png')}}"/>
+                </div>
+                <div>
+                    <p style="margin:3px">
+                        CyberCity header
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="hoverImageContainer">
+            <a href="https://codepen.io/fearOfCode/pen/ZoWMMx" target="_blank" rel="noopener">
+                <div class="hoverImage">
+                    <img src="{{url_for('static',filename='images/projects/this-website/glitchedMessage.png')}}"/>
+                </div>
+                <div>
+                    <p style="margin:3px">
+                        Glitched message badge
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="hoverImageContainer">
+            <a href="https://codepen.io/yuhomyan/pen/OJMejWJ" target="_blank" rel="noopener">
+                <div class="hoverImage">
+                    <img src="{{url_for('static',filename='images/projects/this-website/button.png')}}"/>
+                </div>
+                <div>
+                    <p style="margin:3px">
+                        Animated button
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="hoverImageContainer">
+            <a href="https://codepen.io/bartuc/pen/LGrpjW" target="_blank" rel="noopener">
+                <div class="hoverImage">
+                    <img src="{{url_for('static',filename='images/projects/this-website/leftMenuItem.png')}}"/>
+                </div>
+                <div>
+                    <p style="margin:3px">
+                        Left menu item
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="hoverImageContainer">
+            <a href="https://codepen.io/nickpettit/pen/nOOdme" target="_blank" rel="noopener">
+                <div class="hoverImage">
+                    <img src="{{url_for('static',filename='images/projects/this-website/levels.png')}}"/>
+                </div>
+                <div>
+                    <p style="margin:3px">
+                        Animated levels
+                    </p>
+                </div>
+            </a>
+        </div>
+        <p>
+            On my journey of creating this website I enhanced my UI/UX designing skills to a point a can feel proud
+            about them (not saying they are 8th wonder, but I do defend myself).
+            Another thing I achieved is learning the litle beyond the basics of javascript, enough to make a 
+            completely functional website (Not really looking forward to go down the javascript rabbit's hole)
+            <br>
+            By the way...
+        </p>
+        <center><img class="smallImageFormat" style="width:400px;height:auto;" src="{{url_for('static',filename='images/projects/this-website/thankyoujavascript.jpeg')}}" width="200px"></center>
+        <p>
+            If you don't understand the reference just go to twitter, type «Thank you javascript» on the searchbar
+            and take a look xd
+        </p>
+        <h2>This server's backend</h2>
+        <p>
+            I seriously have no idea why I decided to use python for the backend language when I have a better understanding of java haha. 
+            I suppose because python is like my happy place, the place I go whenever I'm tired of java's <em>System.out.println();</em> 
+            shit. <br>
+            I used flask framework to create this website. I was told it is great for building small websites (unlike Django which fits
+            better for larger and scalable websites) and, to be honest, I didn't have any major trouble when building it (besides going through the not 
+            explicit at all documentation). Now, here's a meme that I strongly relate to when I found out about flask 
+            forms.
+        </p>
+        <center><img class="smallImageFormat" style="height:400px;width:auto;" src="{{url_for('static',filename='images/projects/this-website/flask-wtf.PNG')}}"></center>
+        <p>
+            I used MySQL as my backend database and again, I have better understanding of another database language, MS SQL Server, but 
+            this time I did have a reason to choose MySQL over MS SQL and is that I didn't know how to use MS SQL on the linux terminal XD and already
+            had MySQL installed so, meh why not.
+            <br>
+            This server only required 3 tables, one for comments, one for links and the last one for describing link types. I followed the standarized 
+            normalization (up to the 3rd normal form). 
+            <br>
+            Finally, to query the website content through the search bar I came up with an idea. Adding keywords on each link separated by spaces and 
+            creating a regular expresion to fetch the records that had at least one incidence (or in some cases almost an incidence). Here is the regular
+            expresion in question.
+        </p>
+        <h2>Network configuration</h2>
+        <p>
+            Now the network configuration. As I stated before, I built this website from the very scratch, that includes configuring
+            my home network allowing internet traffic. Luckily that wasn't hard, since I already had knowledge and experience on CISCO
+            networking and knew the steps that had to be done to deploy a webserver. 
+            The first thing that had to be done is giving the hosting machine a static IP so the PAT (<span style="font-style:oblique;">Port Address Translation</span>) would
+            continue working even if the machine disconnected and reconnected from the network. For that you must go to the webpage on 
+            your network gateway by simply typing your gateway IP on any web browser, which is normally either 192.168.1.1 or 192.168.1.254 
+            (unless you are working with CISCO equipment, then you must configure it on the terminal), introducing the credentials 
+            and look for the DHCP (<span style="font-style: oblique;">Dynamic host configuration protocol</span>) section. Once there
+            I simply searched the hosting device MAC Address and set the static IP to be 192.168.1.1.
+            <br>
+            The next step was look for the section to configure the PAT, in home network modems it is usually called «port translation», 
+            «port mapping» or something like that. This protocol allows us to connect on a private network from the internet by allowing
+            incoming traffic from a especified port, which in this case was port 80. The following picture shows the record that contains
+            this configuration, being the first value an identifying label, the second one the local inside IP (which is static), the third
+            one the allowed protocol traffic, the fourth one the local inside port or the hosting machine port where the server is running 
+            and finally the local outside port (which is the port where incoming traffic is allowed).
+        </p>
+        <center><img class="smallImageFormat" src="{{url_for('static',filename='images/projects/this-website/PAT.PNG')}}"></center>
+        <p>
+            Now, this is the part where lost 45 dollars due to my ignorance on DNS. I wanted to set a domain for my website, of course it wouldn't
+            be viable at all to leave it like that. So I did some research on google and stumbled upon a domain management website named as 
+            <a href="https://www.noip.com/" target="_blank" rel="noopener">no-ip.com</a>
+            
+        </p>
+    </div>
+
+{% endblock content %}

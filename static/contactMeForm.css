@@ -1,0 +1,83 @@
+.container{
+    width: 100%;
+    height: 100%;
+    font-weight: bold; 
+}
+
+.top{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    float:center;
+    
+}
+
+.half{
+    width: 45%;
+    margin-left: 2.5%;
+    float:left;
+    
+}
+
+.bottom{
+    width:92.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding-left:2.4%;
+    margin-top:2.7%;
+    
+    
+}
+
+.formStyle{
+    border-radius: 0px;
+    box-shadow:rgba(0,0,0,0.8) 0px 10px 10px;
+    background-color: #3c3c3c;
+    color:#aaaaaa;
+    border:none;
+    padding:5px;
+    border-bottom: solid 2px #5e5e5e;
+    width:50%;    
+}
+
+.formStyleSubject{
+    border-radius: 0px;
+    box-shadow:rgba(0,0,0,0.8) 0px 10px 10px;
+    background-color: #3c3c3c;
+    color:#aaaaaa;
+    border:none;
+    padding:5px;
+    border-bottom: solid 2px #5e5e5e;
+    width:72%
+}
+
+.formStyleMessage{
+    border-radius: 0px;
+    box-shadow:rgba(0,0,0,0.8) 0px 10px 10px;
+    background-color: #3c3c3c;
+    color:#aaaaaa;
+    border:none;
+    padding:5px;
+    border-bottom: solid 2px #5e5e5e; 
+    width:72%;
+    overflow-y: scroll;
+    resize:none;
+    scrollbar-width: 30px;
+}
+
+.formStyleMessage::-webkit-scrollbar{
+    width:8px;
+}
+
+.formStyleMessage::-webkit-scrollbar-track{
+    background:rgba(0,0,0,0);
+}
+
+.formStyleMessage::-webkit-scrollbar-thumb{
+    background:#1e1e1e;
+    border-radius: 4px;
+}
+
+#formStyleMessage::-webkit-scrollbar-thumb:hover{
+    background: #2a2a2a;
+}

@@ -1,0 +1,208 @@
+{% extends "./layout.html"%}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='progressBar.css')}}">
+{% endblock %}
+
+
+{% block loadFunction %}
+    document.getElementById("CArrowContent").style.visibility = "hidden";
+    document.getElementById("CArrowContent").className = "botomContentHidden";
+    document.getElementById("MatlabArrowContent").style.visibility = "hidden";
+    document.getElementById("MatlabArrowContent").className = "botomContentHidden";
+    document.getElementById("x86ArrowContent").style.visibility = "hidden";
+    document.getElementById("x86ArrowContent").className = "botomContentHidden";
+    document.getElementById("ProteusArrowContent").style.visibility = "hidden";
+    document.getElementById("ProteusArrowContent").className = "botomContentHidden";
+{% endblock loadFunction%}
+
+
+{% block functions %}
+    function showDesc(id){
+        if(document.getElementById(id).innerHTML == "►"){
+            document.getElementById(id).innerHTML = "&#9660;";
+            document.getElementById(id+"Content").style.visibility = "visible";
+            document.getElementById(id+"Content").className = "botomContentShown";
+        }
+        else if(document.getElementById(id).innerHTML == "▼"){
+            document.getElementById(id).innerHTML = "&#9658;";
+            document.getElementById(id+"Content").style.visibility = "hidden";
+            document.getElementById(id+"Content").className = "botomContentHidden";
+        }
+        return;
+    }
+
+    
+{% endblock functions %}
+
+
+{% block content %}
+    <h2>Electronic paradigms & knowledge</h2>
+    <div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;Digital electronics
+            </div>
+            <div style="width: 50%;float:left">
+                &#8226;Analog low/high power electronics
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;PCB Design
+            </div>
+            <div style="width: 50%;float:left">
+                &#8226;Electricity
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;Microcomputers (Rasperry pi)
+            </div>
+            <div style="width: 50%;float: left;">
+                &#8226;Microcontrollers (Arduino, PIC, SMTCube)
+            </div>
+        </div>
+    </div>
+    <p>
+        <br><br><br><br><br>
+    </p>
+    <h2>Software & programming languages</h2>
+    <div class="halfContentHalfBar">
+        <div class="halfContent">
+            <div class="verticalCenter">
+            </div>
+        </div>
+        <div class="halfBar">
+            <div class="verticalCenter">
+            <ul>
+                <li>Beginner</li>
+                <li>Intermediate</li>
+                <li>Advanced</li>
+                <li>Professional</li>
+                <li>Expert</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="x86Arrow" href="javascript:showDesc('x86Arrow');" >&#9658;</a> x86 Assembly
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="x86ArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;PIC microcontrollers<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;4 digit counter using 7 segment display on PIC16F877A (scholar)<br>
+        </p>
+        <br>
+    </div>
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="CArrow" href="javascript:showDesc('CArrow');" >&#9658;</a> Embedded C/C++
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="reachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="CArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Arduino<br>
+            &#8226;SMT32 Core<br>
+            &#8226;ESP8266<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;Intelligent greenhouse using arduino (scholar)<br>
+            &#8226;Embedded server for IoT controller using ESP8266, HTML and CSS(scholar)<br>
+            &#8226;I/O Desktop control application for mechatronical system using Arduino and C# (scholar)
+        </p>
+    </div>
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="MatlabArrow" href="javascript:showDesc('MatlabArrow');" >&#9658;</a> Matlab
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="MatlabArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Simulink<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;3DOF SCARA simulation (scholar)<br>
+            &#8226;System and 3D modelling of mobile with differential traction robot (scholar)<br>
+            &#8226;Transformer efficiency calculator (scholar)<br>
+        </p>
+    </div>
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="ProteusArrow" href="javascript:showDesc('ProteusArrow');" >&#9658;</a> Proteus
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="ProteusArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Simulator<br>
+            &#8226;PCB Design<br>
+        </p>
+    </div>
+    <p>
+        <br>
+    </p>
+    <h2>Professional Experience</h2>
+    <p class="tightParagraph">
+        No professional experience yet :(
+    </p>
+    
+{% endblock content %}

@@ -1,0 +1,658 @@
+img {
+    width:150px;
+    height:150px;
+    position:absolute;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.entry{
+    background-color: #3c3c3c; 
+    height:150px;
+    width:500px;
+    font-style: italic; 
+    box-sizing: border-box;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right:20px;
+    float:left;
+    position:relative;
+    transition: all 500ms linear;
+}
+
+.entryImage{
+    position:relative;
+    width: 150px;
+    height:150px;
+    float:left;
+    overflow: hidden;
+}
+
+
+.entryText{
+    padding-left:15px;
+    width:300px;
+    height:fit-content;
+    float:left;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+h4{
+    font-size:15px;
+    color:#20c20e;
+    line-height: 1;
+    margin-top: 15px;
+}
+
+p{
+    line-height: 1.1;
+}
+
+.noBottomMargin{
+    margin-bottom: 0px;
+}
+
+@keyframes glitch-anim-1 {
+0% {
+    clip: rect(279px, 1280px, 459px, 0);
+    -ms-transform: scale(1.2) skewX(-2deg);
+    -webkit-transform: scale(1.2) skewX(-5deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+2.85714% {
+    clip: rect(718px, 1280px, 443px, 0);
+    -ms-transform: scale(1.2) skewX(-14deg);
+    -webkit-transform: scale(1.2) skewX(-27deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+5.71429% {
+    clip: rect(272px, 1280px, 657px, 0);
+    -ms-transform: scale(1.2) skewX(-5deg);
+    -webkit-transform: scale(1.2) skewX(-18deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+8.57143% {
+    clip: rect(147px, 1280px, 182px, 0);
+    -ms-transform: scale(1.2) skewX(-21deg);
+    -webkit-transform: scale(1.2) skewX(0deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+11.42857% {
+    clip: rect(629px, 1280px, 478px, 0);
+    -ms-transform: scale(1.2) skewX(-17deg);
+    -webkit-transform: scale(1.2) skewX(-8deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+14.28571% {
+    clip: rect(652px, 1280px, 207px, 0);
+    -ms-transform: scale(1.2) skewX(-1deg);
+    -webkit-transform: scale(1.2) skewX(-24deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+17.14286% {
+    clip: rect(610px, 1280px, 28px, 0);
+    -ms-transform: scale(1.2) skewX(-25deg);
+    -webkit-transform: scale(1.2) skewX(-4deg);
+    transform: scale(1.2) skewX(-8deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+20% {
+    clip: rect(136px, 1280px, 636px, 0);
+    -ms-transform: scale(1.2) skewX(-21deg);
+    -webkit-transform: scale(1.2) skewX(-27deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+22.85714% {
+    clip: rect(127px, 1280px, 333px, 0);
+    -ms-transform: scale(1.2) skewX(-27deg);
+    -webkit-transform: scale(1.2) skewX(-5deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+25.71429% {
+    clip: rect(550px, 1280px, 452px, 0);
+    -ms-transform: scale(1.2) skewX(-19deg);
+    -webkit-transform: scale(1.2) skewX(-26deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+28.57143% {
+    clip: rect(649px, 1280px, 496px, 0);
+    -ms-transform: scale(1.2) skewX(-10deg);
+    -webkit-transform: scale(1.2) skewX(-17deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+31.42857% {
+    clip: rect(45px, 1280px, 454px, 0);
+    -ms-transform: scale(1.2) skewX(-29deg);
+    -webkit-transform: scale(1.2) skewX(-18deg);
+    transform: scale(1.2) skewX(-6deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+34.28571% {
+    clip: rect(696px, 1280px, 12px, 0);
+    -ms-transform: scale(1.2) skewX(-7deg);
+    -webkit-transform: scale(1.2) skewX(0deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+37.14286% {
+    clip: rect(583px, 1280px, 490px, 0);
+    -ms-transform: scale(1.2) skewX(-3deg);
+    -webkit-transform: scale(1.2) skewX(-26deg);
+    transform: scale(1.2) skewX(-6deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+40% {
+    clip: rect(366px, 1280px, 520px, 0);
+    -ms-transform: scale(1.2) skewX(-4deg);
+    -webkit-transform: scale(1.2) skewX(-13deg);
+    transform: scale(1.2) skewX(-6deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+42.85714% {
+    clip: rect(340px, 1280px, 619px, 0);
+    -ms-transform: scale(1.2) skewX(-17deg);
+    -webkit-transform: scale(1.2) skewX(-13deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+45.71429% {
+    clip: rect(438px, 1280px, 217px, 0);
+    -ms-transform: scale(1.2) skewX(-12deg);
+    -webkit-transform: scale(1.2) skewX(-28deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+48.57143% {
+    clip: rect(723px, 1280px, 164px, 0);
+    -ms-transform: scale(1.2) skewX(-9deg);
+    -webkit-transform: scale(1.2) skewX(-23deg);
+    transform: scale(1.2) skewX(-6deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+51.42857% {
+    clip: rect(17px, 1280px, 635px, 0);
+    -ms-transform: scale(1.2) skewX(-28deg);
+    -webkit-transform: scale(1.2) skewX(-28deg);
+    transform: scale(1.2) skewX(-8deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+54.28571% {
+    clip: rect(220px, 1280px, 588px, 0);
+    -ms-transform: scale(1.2) skewX(-25deg);
+    -webkit-transform: scale(1.2) skewX(-13deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+57.14286% {
+    clip: rect(719px, 1280px, 398px, 0);
+    -ms-transform: scale(1.2) skewX(-15deg);
+    -webkit-transform: scale(1.2) skewX(-16deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+60% {
+    clip: rect(757px, 1280px, 22px, 0);
+    -ms-transform: scale(1.2) skewX(-27deg);
+    -webkit-transform: scale(1.2) skewX(-12deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+62.85714% {
+    clip: rect(591px, 1280px, 382px, 0);
+    -ms-transform: scale(1.2) skewX(-12deg);
+    -webkit-transform: scale(1.2) skewX(-27deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+65.71429% {
+    clip: rect(178px, 1280px, 585px, 0);
+    -ms-transform: scale(1.2) skewX(-24deg);
+    -webkit-transform: scale(1.2) skewX(-15deg);
+    transform: scale(1.2) skewX(-2deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+68.57143% {
+    clip: rect(524px, 1280px, 459px, 0);
+    -ms-transform: scale(1.2) skewX(-22deg);
+    -webkit-transform: scale(1.2) skewX(-7deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+71.42857% {
+    clip: rect(732px, 1280px, 447px, 0);
+    -ms-transform: scale(1.2) skewX(-19deg);
+    -webkit-transform: scale(1.2) skewX(-8deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+74.28571% {
+    clip: rect(474px, 1280px, 98px, 0);
+    -ms-transform: scale(1.2) skewX(-1deg);
+    -webkit-transform: scale(1.2) skewX(-11deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+77.14286% {
+    clip: rect(256px, 1280px, 562px, 0);
+    -ms-transform: scale(1.2) skewX(-17deg);
+    -webkit-transform: scale(1.2) skewX(-24deg);
+    transform: scale(1.2) skewX(-2deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+80% {
+    clip: rect(61px, 1280px, 243px, 0);
+    -ms-transform: scale(1.2) skewX(-18deg);
+    -webkit-transform: scale(1.2) skewX(-15deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+82.85714% {
+    clip: rect(460px, 1280px, 416px, 0);
+    -ms-transform: scale(1.2) skewX(-27deg);
+    -webkit-transform: scale(1.2) skewX(-15deg);
+    transform: scale(1.2) skewX(-8deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+85.71429% {
+    clip: rect(5px, 1280px, 113px, 0);
+    -ms-transform: scale(1.2) skewX(-24deg);
+    -webkit-transform: scale(1.2) skewX(-24deg);
+    transform: scale(1.2) skewX(-3deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+88.57143% {
+    clip: rect(573px, 1280px, 81px, 0);
+    -ms-transform: scale(1.2) skewX(-2deg);
+    -webkit-transform: scale(1.2) skewX(-7deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+91.42857% {
+    clip: rect(193px, 1280px, 56px, 0);
+    -ms-transform: scale(1.2) skewX(-28deg);
+    -webkit-transform: scale(1.2) skewX(-22deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+94.28571% {
+    clip: rect(84px, 1280px, 164px, 0);
+    -ms-transform: scale(1.2) skewX(-13deg);
+    -webkit-transform: scale(1.2) skewX(-25deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+97.14286% {
+    clip: rect(347px, 1280px, 336px, 0);
+    -ms-transform: scale(1.2) skewX(-4deg);
+    -webkit-transform: scale(1.2) skewX(-28deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+100% {
+    clip: rect(601px, 1280px, 461px, 0);
+    -ms-transform: scale(1.2) skewX(-22deg);
+    -webkit-transform: scale(1.2) skewX(-28deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+}
+@keyframes glitch-anim-2 {
+0% {
+    clip: rect(521px, 1280px, 467px, 0);
+    -ms-transform: scale(1.2) skewX(-22deg);
+    -webkit-transform: scale(1.2) skewX(-8deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+2.85714% {
+    clip: rect(714px, 1280px, 81px, 0);
+    -ms-transform: scale(1.2) skewX(-18deg);
+    -webkit-transform: scale(1.2) skewX(-19deg);
+    transform: scale(1.2) skewX(-3deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+5.71429% {
+    clip: rect(139px, 1280px, 399px, 0);
+    -ms-transform: scale(1.2) skewX(-12deg);
+    -webkit-transform: scale(1.2) skewX(0deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+8.57143% {
+    clip: rect(726px, 1280px, 390px, 0);
+    -ms-transform: scale(1.2) skewX(-23deg);
+    -webkit-transform: scale(1.2) skewX(-25deg);
+    transform: scale(1.2) skewX(-8deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+11.42857% {
+    clip: rect(503px, 1280px, 268px, 0);
+    -ms-transform: scale(1.2) skewX(-1deg);
+    -webkit-transform: scale(1.2) skewX(-1deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+14.28571% {
+    clip: rect(402px, 1280px, 114px, 0);
+    -ms-transform: scale(1.2) skewX(-5deg);
+    -webkit-transform: scale(1.2) skewX(-26deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+17.14286% {
+    clip: rect(371px, 1280px, 632px, 0);
+    -ms-transform: scale(1.2) skewX(-17deg);
+    -webkit-transform: scale(1.2) skewX(-19deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+20% {
+    clip: rect(647px, 1280px, 336px, 0);
+    -ms-transform: scale(1.2) skewX(-9deg);
+    -webkit-transform: scale(1.2) skewX(-19deg);
+    transform: scale(1.2) skewX(-9deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+22.85714% {
+    clip: rect(717px, 1280px, 160px, 0);
+    -ms-transform: scale(1.2) skewX(0deg);
+    -webkit-transform: scale(1.2) skewX(-6deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+25.71429% {
+    clip: rect(700px, 1280px, 271px, 0);
+    -ms-transform: scale(1.2) skewX(-17deg);
+    -webkit-transform: scale(1.2) skewX(-9deg);
+    transform: scale(1.2) skewX(-2deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+28.57143% {
+    clip: rect(404px, 1280px, 764px, 0);
+    -ms-transform: scale(1.2) skewX(-2deg);
+    -webkit-transform: scale(1.2) skewX(-26deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+31.42857% {
+    clip: rect(645px, 1280px, 500px, 0);
+    -ms-transform: scale(1.2) skewX(-4deg);
+    -webkit-transform: scale(1.2) skewX(-10deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+34.28571% {
+    clip: rect(560px, 1280px, 81px, 0);
+    -ms-transform: scale(1.2) skewX(-23deg);
+    -webkit-transform: scale(1.2) skewX(-20deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+37.14286% {
+    clip: rect(252px, 1280px, 122px, 0);
+    -ms-transform: scale(1.2) skewX(-27deg);
+    -webkit-transform: scale(1.2) skewX(-3deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+40% {
+    clip: rect(100px, 1280px, 377px, 0);
+    -ms-transform: scale(1.2) skewX(-1deg);
+    -webkit-transform: scale(1.2) skewX(-29deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+42.85714% {
+    clip: rect(280px, 1280px, 269px, 0);
+    -ms-transform: scale(1.2) skewX(-28deg);
+    -webkit-transform: scale(1.2) skewX(-1deg);
+    transform: scale(1.2) skewX(-9deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+45.71429% {
+    clip: rect(459px, 1280px, 319px, 0);
+    -ms-transform: scale(1.2) skewX(-20deg);
+    -webkit-transform: scale(1.2) skewX(-1deg);
+    transform: scale(1.2) skewX(-6deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+48.57143% {
+    clip: rect(169px, 1280px, 204px, 0);
+    -ms-transform: scale(1.2) skewX(-27deg);
+    -webkit-transform: scale(1.2) skewX(-24deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+51.42857% {
+    clip: rect(474px, 1280px, 351px, 0);
+    -ms-transform: scale(1.2) skewX(-14deg);
+    -webkit-transform: scale(1.2) skewX(0deg);
+    transform: scale(1.2) skewX(-3deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+54.28571% {
+    clip: rect(9px, 1280px, 191px, 0);
+    -ms-transform: scale(1.2) skewX(-25deg);
+    -webkit-transform: scale(1.2) skewX(-28deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+57.14286% {
+    clip: rect(266px, 1280px, 304px, 0);
+    -ms-transform: scale(1.2) skewX(-3deg);
+    -webkit-transform: scale(1.2) skewX(-24deg);
+    transform: scale(1.2) skewX(-3deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+60% {
+    clip: rect(110px, 1280px, 631px, 0);
+    -ms-transform: scale(1.2) skewX(-17deg);
+    -webkit-transform: scale(1.2) skewX(-10deg);
+    transform: scale(1.2) skewX(-6deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+62.85714% {
+    clip: rect(677px, 1280px, 751px, 0);
+    -ms-transform: scale(1.2) skewX(-18deg);
+    -webkit-transform: scale(1.2) skewX(-12deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+65.71429% {
+    clip: rect(338px, 1280px, 529px, 0);
+    -ms-transform: scale(1.2) skewX(-18deg);
+    -webkit-transform: scale(1.2) skewX(-27deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+68.57143% {
+    clip: rect(442px, 1280px, 642px, 0);
+    -ms-transform: scale(1.2) skewX(-24deg);
+    -webkit-transform: scale(1.2) skewX(-10deg);
+    transform: scale(1.2) skewX(-2deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+71.42857% {
+    clip: rect(662px, 1280px, 291px, 0);
+    -ms-transform: scale(1.2) skewX(-12deg);
+    -webkit-transform: scale(1.2) skewX(-14deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+74.28571% {
+    clip: rect(271px, 1280px, 202px, 0);
+    -ms-transform: scale(1.2) skewX(-12deg);
+    -webkit-transform: scale(1.2) skewX(-28deg);
+    transform: scale(1.2) skewX(-1deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+77.14286% {
+    clip: rect(94px, 1280px, 483px, 0);
+    -ms-transform: scale(1.2) skewX(-22deg);
+    -webkit-transform: scale(1.2) skewX(-9deg);
+    transform: scale(1.2) skewX(-3deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+80% {
+    clip: rect(708px, 1280px, 426px, 0);
+    -ms-transform: scale(1.2) skewX(-5deg);
+    -webkit-transform: scale(1.2) skewX(-25deg);
+    transform: scale(1.2) skewX(-8deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+82.85714% {
+    clip: rect(403px, 1280px, 269px, 0);
+    -ms-transform: scale(1.2) skewX(-23deg);
+    -webkit-transform: scale(1.2) skewX(-11deg);
+    transform: scale(1.2) skewX(-7deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+85.71429% {
+    clip: rect(307px, 1280px, 520px, 0);
+    -ms-transform: scale(1.2) skewX(0deg);
+    -webkit-transform: scale(1.2) skewX(-2deg);
+    transform: scale(1.2) skewX(0deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+88.57143% {
+    clip: rect(295px, 1280px, 404px, 0);
+    -ms-transform: scale(1.2) skewX(-20deg);
+    -webkit-transform: scale(1.2) skewX(-15deg);
+    transform: scale(1.2) skewX(-5deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+91.42857% {
+    clip: rect(222px, 1280px, 465px, 0);
+    -ms-transform: scale(1.2) skewX(-3deg);
+    -webkit-transform: scale(1.2) skewX(-9deg);
+    transform: scale(1.2) skewX(-9deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+94.28571% {
+    clip: rect(331px, 1280px, 755px, 0);
+    -ms-transform: scale(1.2) skewX(-25deg);
+    -webkit-transform: scale(1.2) skewX(-9deg);
+    transform: scale(1.2) skewX(-2deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+97.14286% {
+    clip: rect(12px, 1280px, 448px, 0);
+    -ms-transform: scale(1.2) skewX(-27deg);
+    -webkit-transform: scale(1.2) skewX(-23deg);
+    transform: scale(1.2) skewX(-3deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+100% {
+    clip: rect(383px, 1280px, 759px, 0);
+    -ms-transform: scale(1.2) skewX(-12deg);
+    -webkit-transform: scale(1.2) skewX(-23deg);
+    transform: scale(1.2) skewX(-4deg);
+    -webkit-filter: saturate(9);
+    filter: saturate(9);
+}
+}
+.entry:hover .entryImageGlitch > img {
+position: absolute;
+top: 0px;
+left: 0px;
+}
+.entry:hover .entryImageGlitch > img:nth-child(2),
+.entry:hover .entryImageGlitch > img:nth-child(3) {
+clip: rect(0, 0, 0, 0);
+}
+.entry:hover .entryImageGlitch > img:nth-child(2) {
+left: 2px;
+animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+.entry:hover .entryImageGlitch > img:nth-child(3) {
+left: -2px;
+animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.entry:hover{
+    background-color: #4d4d4d; 
+    color:#bbbbbb;
+}

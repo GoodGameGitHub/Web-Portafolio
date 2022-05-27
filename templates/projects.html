@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='horizontalCards.css')}}">
+{% endblock %}
+
+{% block content %}
+    
+    <div class="entry">
+        <div class="entryImage">
+            <div class="entryImageGlitch">
+              <img src="{{url_for('static',filename='images/projects/WebpageEntry.png')}}" />
+              <img src="{{url_for('static',filename='images/projects/WebpageEntry.png')}}" />
+              <img src="{{url_for('static',filename='images/projects/WebpageEntry.png')}}" />
+            </div>
+        </div>
+        <div class="entryText noBottomMargin">
+            <h4>This website</h4>
+            <p class="noBottomMargin">The process of building this website's frontend, backend, network configuration and how I lost $45 for nothing...</p>
+        </div>
+        <div style="float:right">
+            <a href="/projects/this-website"><button class="custom-btn btn-1" ><span>Read More</span></button></a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entryImage">
+            <div class="entryImageGlitch">
+              <img src="{{url_for('static',filename='images/projects/Computer.png')}}" />
+              <img src="{{url_for('static',filename='images/projects/Computer.png')}}" />
+              <img src="{{url_for('static',filename='images/projects/Computer.png')}}" />
+            </div>
+          </div>
+        <div class="entryText noBottomMargin">
+            <h4>3D Modelling of my workspace</h4>
+            <p class="noBottomMargin">Modelling my desktop and the stuff on it in Fusion360 as I saw it suitable for a modelling excercise/challenge</p>
+        </div>
+        <div style="float:right">
+            <a href="/projects/modellingMyWorkspace"><button class="custom-btn btn-1" ><span>Read More</span></button></a>
+        </div>
+    </div>
+
+
+{% endblock content %}

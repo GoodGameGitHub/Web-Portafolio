@@ -1,0 +1,107 @@
+<!--Color palette-->
+<!--#aaaaaa - light gray text-->
+<!--#3c3c3c - gray divisions-->
+<!--#1e1e1e - Dark gray background-->
+<!--#20c20e - Hacking green - Links-->
+<!--white - important text-->
+<!--black - shadows-->
+
+
+<?xml version="1.0" encoding="utf-16"?>
+<!DOCTYPE html>
+    
+<html lang="en-US">
+    <head>
+        <title>KM | Mechatronical engineer</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Kevin Montoya portfolio and personal blog" />
+        <meta name="keywords" content="Mechatronical engineering, software development, web development, networking, electronics, electricity, hacking, 3D modeling, microcontrollers, linux, databases" />
+        
+
+    <script type="text/javascript">
+        function showLeft(b) {
+            var contents = document.getElementById("LeftBar");
+            var main = document.getElementById("MainFlow");
+            var toggle = document.getElementById("ToggleLeft");
+            if (b) {
+                contents.className = "LeftBar_shown";
+                main.className = "MainFlow_indented";
+                toggle.innerHTML = "Hide left menu";
+                document.cookie = 'tutorial_showLeftBar=yes; path=/';
+            } else {
+                contents.className = "LeftBar_hidden";
+                main.className = "MainFlow_wide";
+                toggle.innerHTML = "Show left menu";
+                document.cookie = 'tutorial_showLeftBar=no; path=/';
+            }
+        }
+
+        function toggleLeft() {
+            showLeft(document.getElementById("LeftBar").className ==
+                    "LeftBar_hidden");
+            document.getElementById("ToggleLeft").blur();
+        }
+
+        function load() {
+            document.getElementById("ToggleLeft").style.display="inline";
+            {% block loadFunction %}
+            {% endblock %}
+        }
+        {% block functions %}{% endblock %}
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='layout.css')}}">
+    {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body onload="load()">
+        <div id="TopBar">
+            <canvas id="canvas" class="filter" style="width:100%;height:100%;position:absolute">  
+                <script src="/static/cyberCity.js"></script>
+            </canvas>
+            <div class="landscape"></div>
+            <div class="filter"></div>
+        </div>
+    
+        <div id="LeftBar" class="LeftBar_shown">
+            <div id="Contents">
+                    <div class="nolinkLEFTBAR">Content</div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <a href="/"><div class="linkAHEAD">Home page</div></a>
+                    <div class="separator"></div>
+                    <a href="/aboutMe"><div class="linkAHEAD">About me</div></a>
+                    <div class="separator"></div>
+                    <a href="/skills"><div class="linkAHEAD">Skills</div></a>
+                    <div class="separator"></div>
+                    <a href="/projects"><div class="linkAHEAD">Projects</div></a>
+                    <div class="separator"></div>
+                    <a href="/contactMe"><div class="linkAHEAD">Contact Me</div></a>
+                    <div class="separator"></div>
+                    <a href="/entries"><div class="linkAHEAD">Entries</div></a>
+                    <div class="separator"></div>
+            </div>
+        </div>
+
+        <div id="MainFlow" class="MainFlow_indented">        
+            <div class="searchBarDiv">
+                <div>
+                        <form style="float:left" method="POST" id="searchForm" action="{{url_for("search")}}">
+                            <label for="searchField">
+                            <input type="text" name="searchField" id="searchField" size="35" onclick="this.value='';" /></label><input class="searchButton" type="submit" value="Search" />
+                        </form>                    
+                        <a style="float:right; height: 30px;padding-top: 8px;" href="javascript:toggleLeft()" id="ToggleLeft">Hide left menu</a>
+                    </div>
+            </div>
+
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="Footer">
+            <p class="footertext">
+            <a href="https://www.linkedin.com/in/kevin-montoya-zavala/">LinkedIn Profile</a> | 
+            <a href="https://github.com/GoodGameGitHub/GoodGameGitHub">GitHub</a> | 
+            <a href="https://www.youtube.com/channel/UChNaEzqZxddR19SHk7_5OMA">Youtube channel</a> | 
+            <a href="">Twitch channel</a></div>
+    
+    </body>
+</html>

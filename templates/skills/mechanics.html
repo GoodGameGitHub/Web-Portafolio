@@ -1,0 +1,139 @@
+{% extends "./layout.html"%}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='progressBar.css')}}">
+{% endblock stylesheets %}
+
+
+{% block loadFunction %}
+    document.getElementById("FusionArrowContent").style.visibility = "hidden";
+    document.getElementById("FusionArrowContent").className = "botomContentHidden";
+    document.getElementById("FluidSimArrowContent").style.visibility = "hidden";
+    document.getElementById("FluidSimArrowContent").className = "botomContentHidden";
+{% endblock loadFunction%}
+
+
+{% block functions %}
+    function showDesc(id){
+        if(document.getElementById(id).innerHTML == "►"){
+            document.getElementById(id).innerHTML = "&#9660;";
+            document.getElementById(id+"Content").style.visibility = "visible";
+            document.getElementById(id+"Content").className = "botomContentShown";
+        }
+        else if(document.getElementById(id).innerHTML == "▼"){
+            document.getElementById(id).innerHTML = "&#9658;";
+            document.getElementById(id+"Content").style.visibility = "hidden";
+            document.getElementById(id+"Content").className = "botomContentHidden";
+        }
+        return;
+    }
+
+    
+{% endblock functions %}
+
+{% block content %}
+    <h2>Mechanics paradigms & knowledge</h2>
+    <div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;3D modelling
+            </div>
+            <div style="width: 50%;float:left">
+                &#8226;Mechanical design
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;Mechanism design
+            </div>
+            <div style="width: 50%;float:left">
+                &#8226;Hidraulics
+            </div>
+        </div>
+    </div>
+    <p>
+        <br><br><br>
+    </p>
+    <h2>Software</h2>
+    <div class="halfContentHalfBar">
+        <div class="halfContent">
+            <div class="verticalCenter">
+            
+            </div>
+        </div>
+        <div class="halfBar">
+            <div class="verticalCenter">
+            <ul>
+                <li>Beginner</li>
+                <li>Intermediate</li>
+                <li>Advanced</li>
+                <li>Professional</li>
+                <li>Expert</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="FusionArrow" href="javascript:showDesc('FusionArrow');" >&#9658;</a> Fusion360
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="FusionArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;CAD<br>
+            &#8226;Simulation<br>
+            &#8226;Surface modelling<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226; System and 3D modelling of mobile with differential traction robot (scholar)<br>
+            &#8226; 3D modelling of my current workspace<br>
+        </p>
+    </div>
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="FluidSimArrow" href="javascript:showDesc('FluidSimArrow');" >&#9658;</a> FluidSim
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="FluidSimArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Hidraulic/Pneumatic<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;PLC Sequential process simulation (scholar)<br>
+        </p>
+    </div>
+    <p>
+        <br>
+    </p>
+    <h2>Professional Experience</h2>
+    <p class="tightParagraph">
+        No professional experience yet:(
+    </p>
+{% endblock content %}

@@ -1,0 +1,220 @@
+{% extends "./layout.html" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='progressBar.css')}}">
+{% endblock stylesheets %}
+
+
+{% block loadFunction %}
+    document.getElementById("JavaArrowContent").style.visibility = "hidden";
+    document.getElementById("JavaArrowContent").className = "botomContentHidden";
+    document.getElementById("PythonArrowContent").style.visibility = "hidden";
+    document.getElementById("PythonArrowContent").className = "botomContentHidden";
+    document.getElementById("CsharpArrowContent").style.visibility = "hidden";
+    document.getElementById("CsharpArrowContent").className = "botomContentHidden";
+    document.getElementById("WebArrowContent").style.visibility = "hidden";
+    document.getElementById("WebArrowContent").className = "botomContentHidden";
+{% endblock loadFunction%}
+
+
+{% block functions %}
+    function showDesc(id){
+        if(document.getElementById(id).innerHTML == "►"){
+            document.getElementById(id).innerHTML = "&#9660;";
+            document.getElementById(id+"Content").style.visibility = "visible";
+            document.getElementById(id+"Content").className = "botomContentShown";
+        }
+        else if(document.getElementById(id).innerHTML == "▼"){
+            document.getElementById(id).innerHTML = "&#9658;";
+            document.getElementById(id+"Content").style.visibility = "hidden";
+            document.getElementById(id+"Content").className = "botomContentHidden";
+        }
+        return;
+    }
+
+    
+{% endblock functions %}
+
+
+{% block content %}
+    <h2>Programming paradigms & knowledge</h2>
+    <div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;Structured programming
+            </div>
+            <div style="width: 50%;float:left">
+                &#8226;Object oriented programming
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width: 50%;float:left">
+                &#8226;Event oriented programming
+            </div>
+            <div style="width: 50%;float:left">
+                &#8226;Functional programming
+            </div>
+        </div>
+    </div>
+    <p>
+        <br><br><br><br>
+    </p>
+    <h2>Software & programming languages</h2>
+    <div class="halfContentHalfBar">
+        <div class="halfContent">
+            <div class="verticalCenter"></div>
+        </div>
+        <div class="halfBar">
+            <div class="verticalCenter">
+            <ul>
+                <li>Beginner</li>
+                <li>Intermediate</li>
+                <li>Advanced</li>
+                <li>Professional</li>
+                <li>Expert</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="JavaArrow" href="javascript:showDesc('JavaArrow');" >&#9658;</a> Java
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="JavaArrowContent" class="bottomContentHidden">
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Spring<br>
+            &#8226;Angular<br>
+            &#8226;Android Studio
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;Small CRUD application for a 7-eleven store using Java and MySQL (Scholar) <br>
+            &#8226;Coins detector on Java computer vision macro (scholar)
+        </p>
+        <br>
+        
+    </div>
+    
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="PythonArrow" href="javascript:showDesc('PythonArrow');" >&#9658;</a> Python
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="reachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="PythonArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;Flask<br>
+            &#8226;OpenCV<br>
+            &#8226;Tensorflow<br>
+            &#8226;Pandas<br>
+            &#8226;TCP/IP Application layer libraries such as smtplib or http requests library 
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;This website's backend<br>
+            &#8226;Color changer for backgroundless png images<br>
+            &#8226;Single layer and 2 layer neural network training algorithm for IoT controller (scholar)<br>
+            &#8226;Remotely activated keylogger
+        </p>
+        <br>
+    </div>
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="CsharpArrow" href="javascript:showDesc('CsharpArrow');" >&#9658;</a> C#
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="reachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="CsharpArrowContent" class="bottomContentHidden" >
+        <h3>Frameworks and platforms:</h3>
+        <p style="padding-left: 10px;">
+            &#8226;ASP.NET Core<br>
+            &#8226;.NET Framework<br>
+        </p>
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;I/O Desktop control application for mechatronical system using Arduino (scholar)<br>
+            &#8226;Mechanical stress calculator for human knee (scholar)<br>
+        </p>
+        <br>
+    </div>
+
+
+
+    <div class="topContent">
+        <div class="halfContentHalfBar">
+            <div class="halfContent">
+                    <a id="WebArrow" href="javascript:showDesc('WebArrow');" >&#9658;</a> JS/CSS/HTML
+            </div>
+            <div class="halfBar">
+                <ul>
+                    <li class="passedLevel"></li>
+                    <li class="passedLevel"></li>
+                    <li class="unreachedLevel"></li>
+                    <li class="unreachedLevel"> </li>
+                    <li class="unreachedLevel"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="WebArrowContent" class="bottomContentHidden" >
+        <h3>Projects:</h3>
+        <p style="padding-left: 10px">
+            &#8226;This website's frontend<br>
+            &#8226;IoT server's frontend for perception system (scholar)<br>
+        </p>
+    </div>
+    <p>
+        <br>
+    </p>
+    <h2>Professional Experience</h2>
+    <p class="tightParagraph">
+        Development consultant at AXEN IT<br>
+        Date: March 2022 - Present <br>
+        Description: Providing technical support to an ordering portal at both code and database level<br>
+        Programming languages/tools: C# & SQL Server<br>
+        Languages: English & spanish<br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <h2>Certifications</h2>
+    <p>There aren't any official or widely used programming certifications like CCNA or CompTIA, 
+        for example, but I'm putting my <a href="https://www.hackerrank.com/KevinMontoya">hackerrank profile</a> which can provide an 
+        insight of my programming skills</p>
+{% endblock content %}

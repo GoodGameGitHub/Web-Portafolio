@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-16"?>
+<!DOCTYPE html>
+    
+<html lang="en-US">
+    <head>
+        <title>KM | Mechatronical engineer</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Kevin Montoya portfolio and personal blog" />
+        <meta name="keywords" content="Mechatronical engineering, software development, web development, networking, electronics, electricity, hacking, 3D modeling, microcontrollers, linux, databases" />
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}">
+    </head>
+    <body>
+        <div>
+            <div class="landscape"></div>
+            <div class="filter"></div>
+            <canvas id="canvas">
+                <script src="/static/cyberCityHome.js"></script>
+            </canvas>
+        </div>
+        <div style="top:0px;float:right;margin:30px;position:absolute">
+            <div class="canvas-container">
+                <canvas id="canvas2">
+                    <script src="/static/glitchBadge.js"></script>
+                </canvas>
+            </div>
+        </div>
+        <!--
+            <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/programming.png')}}"></center>
+                    <h3>Software Development</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Web development, desktop applications, mobile applications</p>
+                    <center><a href="skills/softwareDevelopment"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+        -->
+        <div class="expandedMenu">
+            <div class="menuMenu">
+                <div class="menuExpander">
+                </div>
+                <div class="menuExpander">
+                </div>
+                <div class="menuExpander">
+                </div>
+            </div>
+            <a href="/aboutMe">
+                <div class="menuItem">
+                    <div class="menuIcon">
+                        <center><img src="{{url_for('static',filename='images/icons/verde/aboutMe_verde_cyber.png')}}"/></center>
+                    </div>
+                    <div class="menuText">
+                        About Me
+                    </div>
+                </div>
+            </a>
+            <div class="division">
+            </div>
+            <a href="/skills">
+                <div class="menuItem">
+                    <div class="menuIcon">
+                        <center><img src="{{url_for('static',filename='images/icons/verde/skills_verde_cyber.png')}}"/></center>
+                    </div>
+                    <div class="menuText">
+                        Skills
+                    </div>
+                </div>
+            </a>
+            <div class="division">
+            </div>
+            <a href="/projects">
+                <div class="menuItem">
+                    <div class="menuIcon">
+                        <center><img src="{{url_for('static',filename='images/icons/verde/projects_verde_cyber.png')}}"/></center>
+                    </div>
+                    <div class="menuText">
+                        Projects
+                    </div>
+                </div>
+            </a>
+            <div class="division">
+            </div>
+            <a href="/contactMe">
+                <div class="menuItem">
+                    <div class="menuIcon">
+                        <center><img src="{{url_for('static',filename='images/icons/verde/contactMe_verde_cyber.png')}}"/></center>
+                    </div>
+                    <div class="menuText">
+                        Contact Me
+                    </div>
+                </div>
+            </a>
+            <div class="division">
+            </div>
+            <a href="/entries">
+                <div class="menuItem">
+                    <div class="menuIcon">
+                        <center><img src="{{url_for('static',filename='images/icons/verde/blog_verde_cyber.png')}}"/></center>
+                    </div>
+                    <div class="menuText">
+                        Blog
+                    </div>
+                </div>
+            </a>
+            <div class="division" >
+            </div>
+            <a href="/search">
+                <div class="menuItem">
+                    <div class="menuIcon">
+                        <center><img src="{{url_for('static',filename='images/icons/verde/search_verde_cyber.png')}}"/></center>
+                    </div>
+                    <div class="menuText">
+                        Search
+                    </div>
+                </div>
+            </a> 
+        </div> 
+    </body>
+</html>

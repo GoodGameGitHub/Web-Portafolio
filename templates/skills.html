@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='informationCards.css')}}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/programming.png')}}"></center>
+                    <h3>Software Development</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Web development, desktop applications, mobile applications</p>
+                    <center><a href="skills/softwareDevelopment"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/mechatronics.png')}}"></center>
+                    <h3>Mechatronics</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Robotics, control, I/O machine interfaces</p>
+                    <center><a href="skills/mechatronics"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/electronics.png')}}"></center>
+                    <h3>Electronics</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Digital and analog electronics, electricity, microcontrollers</p>
+                    <center><a href="skills/electronics"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/databases.png')}}"></center>
+                    <h3>Databases</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>T-SQL, database design</p>
+                        <center><a href="skills/databases"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/linux.png')}}"></center>
+                    <h3>Linux</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Debian, Ubuntu</p>
+                    <center><a href="skills/linux"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/networking.png')}}"></center>
+                    <h3>Networking</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Cisco, pfense</p>
+                    <center><a href="skills/networking"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>        
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/artificialIntelligence.png')}}"></center>
+                    <h3>Machine Learning</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Data science, computer vision, neural networks</p>
+                    <center><a href="skills/machineLearning"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/mechanics.png')}}"></center>
+                    <h3>Mechanics</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Mechanisms design, hidraulics, 3D modelling</p>
+                    <center><a href="skills/mechanics"><button class="custom-btn btn-1" ><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center><img class="imgNoStyle" src="{{url_for('static',filename='images/icons/blanco/hacking.png')}}"></center>
+                    <h3>Cybersecurity</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Script kiddie</p>
+                    <center><a href="skills/cybersecurity"><button class="custom-btn btn-1"><span>Read More</span></button></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

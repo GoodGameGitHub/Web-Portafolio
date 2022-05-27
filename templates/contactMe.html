@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %} 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='contactMeForm.css')}}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+{% endblock stylesheets%}
+
+{% block content %}
+    <div><p>
+        Hello! If you are interested in my portfolio, have a request, a simple question or simply want to provide feedback, please feel free to use the following form and I'll respond as soon as possible.
+    </div>
+
+    <div class="container">
+        <form action="{{url_for("contactMe")}}" method="POST" >
+            {{ form.hidden_tag() }}
+            &nbsp<br>
+            
+            <div class="top">
+                <br>
+                <div class="half" >
+                    {{ form.name.label }}:<br>
+                    {{ form.name(class="formStyle")}}
+                </div>
+                
+                <div class="half">
+                    {{ form.email.label }}:<br>
+                    {{ form.email(class="formStyle")}}
+                    <!--Email: <br>
+                        <input type="text" class="formStyle" name="formEmail" />-->
+                </div>
+                &nbsp<br>&nbsp<br>
+            </div>
+            
+            <div class="bottom">
+                {{ form.subject.label }}:<br>
+                {{ form.subject(class="formStyleSubject") }}
+                <!--Subject: <br>
+                    <input type="text" class="formStyle" name="formSubject" style="width:72%"/>-->
+            </div>
+            &nbsp<br>
+            <div class="bottom" style="margin-top: 0%;">
+                {{ form.message.label }}:<br>
+                {{ form.message(class="formStyleMessage", rows="10") }}
+                <!--Message: <br>
+                    textarea rows="10" type="text" class="formStyle" name="formMessage" style="width:72%;overflow-y: scroll; resize:none;scrollbar-width: 30px;"></textarea>-->
+            </div>
+                <!--<div class="g-recaptcha" data-sitekey="6LdRS9QfAAAAAKzRCs33pOn1Qrvn8JKzN9yQFJ34"></div>-->
+            &nbsp<br>&nbsp<br>
+            <div style="margin-right: 30%;float:right;height: fit-content; padding-bottom: 15px;">
+                <button class="custom-btn btn-1" type="submit"><span>Send</span></button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}
+

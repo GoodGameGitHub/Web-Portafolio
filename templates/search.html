@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% for link in query %}
+        {% if link[5] == None %}
+            <a href="{{link[4]}}" style="color:#aaaaaa">
+                <div class="searchEntryNoImage">
+                        <div style="padding:15px">
+                            <span style="color:#20c20e;line-height: 1;font-size: 15px;padding-bottom: none;font-weight: bold;">{{link[1]}}</span>
+                        <p style="padding-left:15px">
+                            {% if link[6] == None %}
+
+                            {% else %}
+                                {{link[6]}}
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div style="bottom:0px;position:absolute;padding-left:30px;padding-bottom: 5px;font-size:11px; position:absolute">
+                        Tags: {{link[3]}}
+                    </div>
+                </div>
+            </a>    
+        {% else %}
+            <a href="{{link[4]}}" style="color:#aaaaaa">
+                <div class="searchEntryWithImage">
+                    <div class="searchImage">
+                        <img style="height:130px;height:130px;border-radius: 0px;box-shadow:none;" src="{{link[5]}}"/>
+                    </div>
+                    <div style="padding:15px">
+                    <span style="color:#20c20e;line-height: 1;font-size: 15px;padding-bottom: none;font-weight: bold;">{{link[1]}}</span>
+                    <p style="padding-left:15px">
+                        {{link[6]}}
+                    </p>
+                    <div style="bottom:0px;padding-left:150px;padding-bottom: 5px;font-size:10px;height:fit-content;position:absolute">
+                        Tags: {{link[3]}}
+                    </div>
+                    </div>
+                </div>
+            </a>   
+        {% endif %}
+        
+    {% endfor %}
+{% endblock content %}
